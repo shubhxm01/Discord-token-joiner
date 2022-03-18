@@ -1,4 +1,3 @@
-# Discord-token-joiner
 Discord Token joiner undetected and solves captcha if the token gets captcha while joining a server
 
 **How to Use:**
