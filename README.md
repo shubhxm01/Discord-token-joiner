@@ -12,7 +12,9 @@ Discord Token joiner undetected and solves captcha if the token gets captcha whi
 **If you come across any problems, just create an issue with the problem and I'll try to get it fixed ASAP**
 
 Discord - clipssender#2920
+
 Telegram - @Clipssender31
+
 Server - https://discord.gg/Bgtu7ekG
 
 ![](clipsjoiner.png)
