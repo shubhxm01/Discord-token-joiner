@@ -15,6 +15,6 @@ Discord - clipssender#2920
 
 Telegram - @Clipssender31
 
-Server - https://discord.gg/Bgtu7ekG
+Server - https://discord.gg/wrNbhMeQeW
 
 ![](clipsjoiner.png)
