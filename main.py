@@ -3,7 +3,6 @@ from joiner import TokenJoiner
 from itertools import cycle
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore, Style
-import time
 with open('tokens.txt', 'r') as tk:
         tokenss = tk.read().splitlines()
 def Gettokens():
@@ -31,7 +30,7 @@ invitecode = str(input(f"{Style.BRIGHT}{Fore.GREEN}Enter The Invite Code: --> {S
 threadAmount = input(f"{Style.BRIGHT}{Fore.GREEN}{Style.BRIGHT}Number of threads --> {Style.RESET_ALL}")
 def Joiner():
         try:
-            for nigger in tokenss:
+            for tucan in tokenss:
                 tokens = next(tokens_pool)
                 joiner=TokenJoiner(config["apikey"], invitecode, tokens)
                 joiner.JoinServer()
@@ -42,7 +41,6 @@ if __name__ == "__main__":
     threadAmount = 1 if threadAmount == "" else int(threadAmount)
     os.system("cls")
     threads = []
-    time.sleep(config["delay"])
     with ThreadPoolExecutor(max_workers=threadAmount) as joiner:  
         for x in range(threadAmount):
             joiner.submit(Joiner)
