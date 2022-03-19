@@ -5,7 +5,8 @@ First Working discord joiner tool which solves the captcha if a token gets it
 3. configure config.json. leave the apikey blank if you're not looking to solve
 5. Run the main.py file via "python main.py"
 6. Input your server invite code, this is what is after discord.gg/
-7. Then you're done, your tokens should Start Joining the dedicated server
+7. Input The amount of threads (The higher the faster)
+8. Then you're done, your tokens should Start Joining the dedicated server
 # Contacts
 * Discord - clipssender#2920
 * Telegram - @Clipssender31
