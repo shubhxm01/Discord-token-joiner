@@ -1,5 +1,4 @@
-Discord Token joiner undetected and solves captcha if the token gets captcha while joining a server
-
+First Working discord joiner tool which solves the captcha if a token gets it
 # How to Use
 1. Input your tokens
 2. Input your proxies
@@ -7,7 +6,6 @@ Discord Token joiner undetected and solves captcha if the token gets captcha whi
 5. Run the main.py file via "python main.py"
 6. Input your server invite code, this is what is after discord.gg/
 7. Then you're done, your tokens should Start Joining the dedicated server
-
 # Contacts
 * Discord - clipssender#2920
 * Telegram - @Clipssender31
@@ -23,4 +21,5 @@ Discord Token joiner undetected and solves captcha if the token gets captcha whi
 * Server Scraper
 * Bio Changer
 
+# Please Star or fork to help me out and recieve regular updates
 ![](clipsjoiner.png)
