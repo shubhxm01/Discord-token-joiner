@@ -20,7 +20,7 @@ class TokenJoiner:
         self.client.headers["Origin"] = "https://ptb.discord.com"
     def JoinServer(self):
         time.sleep(config["delay"])
-        joinreq = self.client.post(f"https://ptb.discord.com/api/v10/invites/{self.invitecode}", json={})
+        joinreq = self.client.post(f"https://ptb.discord.com/api/v9/invites/{self.invitecode}", json={})
         if "captcha_key" not in joinreq.json():
             if "message" in joinreq.json() and joinreq["message"] == "The user is banned from this guild.":
                 print(f"{self.client.headers['Authorization']} Is Banned From discord.gg/{self.invitecode}")
@@ -28,7 +28,7 @@ class TokenJoiner:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "Joined", joinreq.json()
-        joinreq=self.client.post(f"https://ptb.discord.com/api/v10/invites/{self.invitecode}", json={"captcha_key": self.getCap()})
+        joinreq=self.client.post(f"https://ptb.discord.com/api/v9/invites/{self.invitecode}", json={"captcha_key": self.getCap()})
         if joinreq.status_code == 200:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
