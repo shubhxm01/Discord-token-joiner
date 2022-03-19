@@ -4,9 +4,10 @@ with open('config.json') as fp:
     config = json.load(fp)
 capapi = config["whichapitosolvewith"]
 delay = timeout=config['timeout']
+key=config["apikey"]
 class TokenJoiner:
-    def __init__(self, capKey, invitecode, token):
-        self.capKey = capKey
+    def __init__(self, key, invitecode, token):
+        self.key = key
         self.invitecode = invitecode
         with open("Proxies.txt") as fp:
             proxies = fp.read().splitlines()
@@ -20,7 +21,7 @@ class TokenJoiner:
         self.client.headers["Origin"] = "https://ptb.discord.com"
     def JoinServer(self):
         time.sleep(config["delay"])
-        joinreq = self.client.post(f"https://ptb.discord.com/api/v9/invites/{self.invitecode}", json={})
+        joinreq = self.client.post(f"https://ptb.discord.com/api/v10/invites/{self.invitecode}")
         if "captcha_key" not in joinreq.json():
             if "message" in joinreq.json() and joinreq["message"] == "The user is banned from this guild.":
                 print(f"{self.client.headers['Authorization']} Is Banned From discord.gg/{self.invitecode}")
@@ -28,7 +29,7 @@ class TokenJoiner:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "Joined", joinreq.json()
-        joinreq=self.client.post(f"https://ptb.discord.com/api/v9/invites/{self.invitecode}", json={"captcha_key": self.getCap()})
+        joinreq=self.client.post(f"https://ptb.discord.com/api/v10/invites/{self.invitecode}", json={"captcha_key": self.solvecaptcha()})
         if joinreq.status_code == 200:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
@@ -37,9 +38,9 @@ class TokenJoiner:
             print(
                 f"{Fore.RED}{self.client.headers['Authorization']} Failed To Join discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "NotJoined", joinreq.json()
-    def getCap(self):
+    def solvecaptcha(self):
         solvedCaptcha = None
-        captchaKey = self.capKey
+        captchaKey = self.key
         taskId = ""
         taskId = httpx.post(f"https://api.{capapi}/createTask", json={"clientKey": captchaKey, "task": {"type": "HCaptchaTaskProxyless", "websiteURL": "https://ptb.discord.com/","websiteKey": "4c672d35-0701-42b2-88c3-78380b0db560", "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"}}, timeout=30).json()
         if taskId.get("errorId") > 0:
