@@ -1,5 +1,5 @@
 import json, os, pyfiglet
-from joiner import TokenJoiner
+from clipsjoiner import TokenJoiner
 from itertools import cycle
 from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore, Style
