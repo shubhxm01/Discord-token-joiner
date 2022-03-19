@@ -1,4 +1,6 @@
 {
-    "apikey": "",
-    "whichapitosolvewith": "anti-captcha.com"
+    "apikey": "anticapcha api key here",
+    "whichapitosolvewith": "anti-captcha.com",
+    "timeout": 30,
+    "delay": 8
 }
