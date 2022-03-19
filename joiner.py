@@ -1,4 +1,4 @@
-import random, httpx, json
+import random, httpx, json, time
 from colorama import Fore,Style
 with open('config.json') as fp:
     config = json.load(fp)
@@ -19,6 +19,7 @@ class TokenJoiner:
         self.client.headers["Authorization"] = token
         self.client.headers["Origin"] = "https://ptb.discord.com"
     def JoinServer(self):
+        time.sleep(config["delay"])
         joinreq = self.client.post(f"https://ptb.discord.com/api/v10/invites/{self.invitecode}", json={})
         if "captcha_key" not in joinreq.json():
             if "message" in joinreq.json() and joinreq["message"] == "The user is banned from this guild.":
