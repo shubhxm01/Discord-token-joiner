@@ -1,5 +1,6 @@
 import json, os, pyfiglet
 from joiner import TokenJoiner
+from concurrent.futures import ThreadPoolExecutor
 from colorama import Fore, Style
 with open('Tokens.txt') as tk:
     tokens = tk.read().splitlines()
@@ -18,6 +19,19 @@ if len(tokens) == 0:
     input("[!] Press Enter To Exit: ")
     exit()
 invitecode = str(input(f"{Style.BRIGHT}{Fore.GREEN}Enter The Invite Code: \n--> {Style.RESET_ALL}"))
-for token in tokens:
-    joiner=TokenJoiner(config["apikey"], invitecode, token)
-    joiner.joinServer()
+threadAmount = input(f"{Style.BRIGHT}{Fore.GREEN}{Style.BRIGHT}Number of threads \n--> {Style.RESET_ALL}")
+def Joiner():
+    try:    
+        for token in tokens:
+            joiner=TokenJoiner(config["apikey"], invitecode, token)
+            joiner.joinServer()
+    except Exception as e:
+        print(e)
+        Joiner()
+if __name__ == "__main__":
+    threadAmount = 1 if threadAmount == "" else int(threadAmount)
+    os.system("cls")
+    threads = []
+    with ThreadPoolExecutor(max_workers=threadAmount) as joiner:  
+        for x in range(threadAmount):
+            joiner.submit(Joiner)
