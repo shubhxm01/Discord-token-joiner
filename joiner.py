@@ -1,4 +1,4 @@
-#pls dont skid and share the repo to more people because this is probably the only working joiner that doesnt lock
+#dont skid lol
 import random, httpx, json
 from colorama import Fore,Style
 with open('config.json') as fp:
