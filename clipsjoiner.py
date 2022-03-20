@@ -31,7 +31,6 @@ class TokenJoiner:
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "Joined", joinreq.json()
         sitekey = joinreq.json()["captcha_sitekey"]
-        print(sitekey)
         joinreq=self.client.post(f"https://discord.com/api/v9/invites/{self.invitecode}", json={"captcha_key": self.solvecaptcha(sitekey)})
         if joinreq.status_code == 200:
             print(
