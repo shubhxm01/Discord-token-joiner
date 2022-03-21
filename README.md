@@ -9,8 +9,8 @@ First Working discord joiner tool which solves the captcha if a token gets it
 8. Then you're done, your tokens should Start Joining the dedicated server
 # Contacts
 * Discord - clipssender#2920
-* Telegram - @Clipssender31
-* Server - https://discord.gg/wrNbhMeQeW
+* Telegram - @clipssender
+* Server - https://discord.gg/clipstokens
 * If you come across any problems, just create an issue with the problem and I'll try to get it fixed ASAP
 # Todo
 * Server Spammer
