@@ -16,7 +16,7 @@ First Working discord joiner tool which solves the captcha if a token gets it
 * Server Spammer
 * Server Leaver
 * Token Onliner
-* Make it faster
+* Make it faster - Done
 * Make The requests even more real. Even lower chance of getting captcha
 * Username Changer
 * Server Scraper
