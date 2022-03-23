@@ -30,8 +30,7 @@ class TokenJoiner:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "Joined", joinreq.json()
-        sitekey = joinreq.json()["captcha_sitekey"]
-        joinreq=self.client.post(f"https://discord.com/api/v9/invites/{self.invitecode}", json={"captcha_key": self.solvecaptcha(sitekey)})
+        joinreq=self.client.post(f"https://discord.com/api/v9/invites/{self.invitecode}", json={"captcha_key": self.solvecaptcha()})
         if joinreq.status_code == 200:
             print(
                 f"{Fore.GREEN}{self.client.headers['Authorization']} Successfully Joined discord.gg/{self.invitecode} {Style.RESET_ALL}")
@@ -40,13 +39,13 @@ class TokenJoiner:
             print(
                 f"{Fore.RED}{self.client.headers['Authorization']} Failed To Join discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "NotJoined", joinreq.json()
-    def solvecaptcha(self, sitekey):
+    def solvecaptcha(self):
         capapi = config["whichapitosolvewith"]
         apikey = config["apikey"]
         solvedCaptcha = None
         taskId = ""
         taskId = httpx.post(f"https://api.{capapi}/createTask", json={"clientKey": apikey, "task": {"type": "HCaptchaTaskProxyless", "websiteURL": "https://discord.com/",
-                            "websiteKey": sitekey, "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"}}, timeout=30).json()
+                            "websiteKey": "4c672d35-0701-42b2-88c3-78380b0db560", "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"}}, timeout=30).json()
         if taskId.get("errorId") > 0:
             print(f"[-] createTask - {taskId.get('errorDescription')}!")
             return None
