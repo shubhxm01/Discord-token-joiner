@@ -10,7 +10,7 @@ First Working discord joiner tool which solves the captcha if a token gets it
 # Contacts
 * Discord - clipssender#2920
 * Telegram - @clipssender
-* Server - https://discord.gg/clipstokens
+* Server - https://discord.gg/wrNbhMeQeW
 * If you come across any problems, just create an issue with the problem and I'll try to get it fixed ASAP
 # Todo
 * Server Spammer
