@@ -8,8 +8,8 @@ First Working discord joiner tool which solves the captcha if a token gets it
 7. Input The amount of threads (The higher the faster)
 8. Then you're done, your tokens should Start Joining the dedicated server
 # Contacts
-* Discord -
-* Telegram - @clipssender
+* Discord - Not Sharing on github, can be found in the discord
+* Telegram - @lilclip
 * Server - https://discord.gg/wrNbhMeQeW
 * If you come across any problems, just create an issue with the problem and I'll try to get it fixed ASAP
 # Todo
