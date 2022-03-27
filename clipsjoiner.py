@@ -53,7 +53,7 @@ class TokenJoiner:
         solvedCaptcha = None
         taskId = ""
         taskId = httpx.post(f"https://api.{capapi}/createTask", json={"clientKey": apikey, "task": {"type": "HCaptchaTaskProxyless", "websiteURL": "https://discord.com/",
-                            "websiteKey": "4c672d35-0701-42b2-88c3-78380b0db560", "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"}}, timeout=30).json()
+                            "websiteKey": "a9b5fb07-92ff-493f-86fe-352a2803b3df", "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0"}}, timeout=30).json()
         if taskId.get("errorId") > 0:
             print(f"[-] createTask - {taskId.get('errorDescription')}!")
             return None
