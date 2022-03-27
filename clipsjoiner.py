@@ -46,7 +46,7 @@ class TokenJoiner:
             print(
                 f"{Fore.RED}{self.client.headers['Authorization']} Failed To Join discord.gg/{self.invitecode} {Style.RESET_ALL}")
             return "NotJoined", joinreq.json()
-        
+        #a9b5fb07-92ff-493f-86fe-352a2803b3df
     def solvecaptcha(self):
         capapi = config["whichapitosolvewith"]
         apikey = config["apikey"]
