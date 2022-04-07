@@ -11,7 +11,7 @@ First Working discord joiner tool which solves the captcha if a token gets it
 * Discord - Not Sharing on github, can be found in the discord
 * Telegram - @lilclip
 * Server - https://discord.gg/wrNbhMeQeW
-* If you come across any problems, just create an issue with the problem and I'll try to get it fixed ASAP
+* If you come across any problems, just create an issue with a screenshot and I'll try to get it fixed ASAP
 # Todo
 * Server Spammer
 * Server Leaver
@@ -22,5 +22,5 @@ First Working discord joiner tool which solves the captcha if a token gets it
 * Server Scraper
 * Bio Changer
 
-# Please Star or fork to help me out and recieve regular updates
+# Please Star or fork to help me out and receive regular updates
 ![](clipsjoiner.png)
