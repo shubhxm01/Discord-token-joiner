@@ -1,4 +1,4 @@
-First Working discord joiner tool which solves the captcha if a token gets it
+Scroll Down for more information and support
 ![](clipsjoiner.png)
 # How to Use
 1. Input your tokens
