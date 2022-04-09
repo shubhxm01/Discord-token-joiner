@@ -1,4 +1,5 @@
 First Working discord joiner tool which solves the captcha if a token gets it
+![](clipsjoiner.png)
 # How to Use
 1. Input your tokens
 2. Input your proxies
@@ -16,11 +17,12 @@ First Working discord joiner tool which solves the captcha if a token gets it
 * Server Spammer
 * Server Leaver
 * Token Onliner
-* Make it faster - Done
-* Make The requests even more real. Even lower chance of getting captcha
+* Make it faster - ✅
+* Make The requests even more real. Even lower chance of getting captcha - ✅
 * Username Changer
 * Server Scraper
 * Bio Changer
+# Common Issues
+*  Error Code: "'Response' object is not subscriptable" This is either due to your tokens being invalid/locked or your Proxies being dead. This is self explanatory and is not a proper issue with my code, but with the resources you are providing. Please come to me with an actual issue that deems the joiner of **not** working condition.
 
 # Please Star or fork to help me out and receive regular updates
-![](clipsjoiner.png)
