@@ -1,4 +1,3 @@
-Scroll Down for more information and support
 ![](clipsjoiner.png)
 # How to Use
 1. Input your tokens
