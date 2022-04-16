@@ -5,7 +5,7 @@ with open('config.json') as fp:
     config = json.load(fp)
     
 capapi = config["whichapitosolvewith"]
-delay = timeout=config['timeout']
+timeout=config["timeout"]
 key=config["apikey"]
 
 class TokenJoiner:
