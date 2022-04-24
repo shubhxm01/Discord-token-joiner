@@ -1,0 +1,7 @@
+{
+    "apikey": "",
+    "API": "anti-captcha.com",
+    "Proxyless": false,
+    "timeout": 30,
+    "delay": 1
+}
