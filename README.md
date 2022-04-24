@@ -3,6 +3,7 @@
 1. Input your tokens
 2. Input your proxies
 3. configure config.json. leave the apikey blank if you're not looking to solve
+4. Install all packages via "pip install -r requirements.txt"
 5. Run the main.py file via "python main.py"
 6. Input your server invite code, this is what is after discord.gg/
 7. Input The amount of threads (The higher the faster)
